@@ -1,0 +1,12 @@
+# Start MariaDB
+sudo mysql -u root -p
+SHOW DATABASES;
+# Make a database
+CREATE DATABASE mydatabase;
+# Delete a database
+DROP DATABASE mydatabase;
+USE mydatabase;
+# Create a table in that database
+CREATE TABLE Clients( ClientId int, Money float);
+# Add info to table
+INSERT INTO tablename(firstCol, SecondCol) VALUES (firstVar, secVar);

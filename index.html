@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+
+<?php
+    require "search_for_bitcoinprice.php";
+?>
+<html>
+	<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Crypto Mine</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="A basic database lookup for real time bitcoin market value lookup" />
+        <meta name="keywords" content="" />
+        <meta name="author" content="GHC" />
+
+        <div id="wrapperHeader">
+            <div id="header">
+            <img src="images/logo.png" alt="logo" />
+            </div> 
+        </div>
+
+        <link rel="stylesheet" href="style.css" type="text/css">
+    </head>
+    <body>
+        <div class="topnav">
+            <input type="text" name="client_id" placeholder="Search..">
+        </div>
+
+        <div id="table">
+            <!-- EITHER
+            <?php 
+            $client_id = //SEARCHRESULT
+            // Connects to your Database 
+            mysql_connect("localhost", "root", "morgue1!*") or die(mysql_error()); 
+            mysql_select_db("cryptoMine") or die(mysql_error()); 
+            $data = mysql_query("SELECT * FROM Clients where Clients.ClientId = $client_id") 
+            or die(mysql_error()); 
+            Print "<table border cellpadding=3>"; 
+            while($row= mysql_fetch_array( $data )) 
+            { 
+            Print "<tr>"; 
+            Print "<th>UserId:</th> <td>".$row['UserId'] . "</td> "; 
+            Print "<th>CurrentMoney:</th> <td>".$row['CurrentMoney'] . " </td></tr>"; 
+            } 
+            Print "</table>"; 
+            ?> 
+            OR -->
+           <!--
+            <table>
+                <thead>
+                    <tr>
+                        <th>This</th>
+                        <th>That</th>
+                        <th>The Other</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    //Use a while loop to make a table row for every DB row
+                    <?php while( $row = $sql->fetch()) : ?>
+                    <tr>
+                        //Each table column is echoed in to a td cell
+                        <td><?php echo $row['This']; ?></td>
+                        <td><?php echo $row['That']; ?></td>
+                        <td><?php echo $row['Other']; ?></td>
+                    </tr>
+                    <?php endwhile ?>
+                </tbody>
+            </table>
+            -->
+        </div>
+    </body>
+</html>
+            
